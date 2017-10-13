@@ -4,6 +4,7 @@ $cat=$_POST['categoury'];
 $sn=$_POST['sn'];
 $pic=$_FILES['pic'];
  $plugin_url=plugins_url( 'upload/', __FILE__ );
+echo($pic);
 if ($_FILES[$pic]["error"] > 0)
 	echo "<script>console.log( 'Debug Objects: " .$_FILES[$pic]["error"]. "' );</script>";
     
