@@ -6,7 +6,7 @@ $sn=$_POST['sn'];
         $tmp_name = $_FILES['pic']["tmp_name"][$key];
 $target_dir = "img/";
 $target_file = $target_dir . basename($_FILES[$pic]["name"]);
- echo "<script>console.log( 'Debug Objects: " .$tmp_name. "' );</script>";
+ echo "<script>console.log( 'Debug Objects: " .$sn. "' );</script>";
 
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
