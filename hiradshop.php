@@ -18,7 +18,7 @@ function test_plugin_setup_menu(){
 }
  
 function test_init(){
-	$plugin_url=plugins_url( 'inc/upload_file.php', __FILE__ );
+	/*$plugin_url=plugins_url( 'inc/upload_file.php', __FILE__ );
         echo "<h1>Hi sadmin</h1>";
 		  
 	echo '<form action="'.$plugin_url.'" method="post" enctype="multipart/form-data">';
@@ -32,6 +32,24 @@ function test_init(){
 	 Image:<input type='file' name='pic' accept='image/*.jpg'>
   <br>
   <input type='submit'>
-</form> ";
+</form> ";*/
+	
+	echo'
+	<label for="upload_image">
+    <input id="upload_image" type="text" size="36" name="ad_image" value="http://" /> 
+    <input id="upload_image_button" class="button" type="button" value="Upload Image" />
+    <br />Enter a URL or upload an image
+	</label>';
+	
 }
+add_action('admin_enqueue_scripts', 'my_admin_scripts');
+
+function my_admin_scripts() {
+    if (isset($_GET['page']) && $_GET['page'] == 'my_plugin_page') {
+        wp_enqueue_media();
+        wp_register_script('shoping', WP_PLUGIN_URL.'/hirad_shoping/js/shoping.js', array('jquery'));
+        wp_enqueue_script('shoping');
+    }
+}
+
 
