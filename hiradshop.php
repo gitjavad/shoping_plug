@@ -21,7 +21,14 @@ function test_init(){
         echo "<h1>Hi sadmin</h1>";
 		
 	echo "<form action='/action_page.php'>
- <input type='file' name='pic' accept='image/*.jpg'>
+		Company Name:<input type='text' name='copmany'>
+		<br>
+	Categoury name:<input type='text' name='categoury'>
+	<br>
+	Code:<input type='text' name='sn'>
+	<br>
+	 Image:<input type='file' name='pic' accept='image/*.jpg'>
+  <br>
   <input type='submit'>
 </form> ";
 }
