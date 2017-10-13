@@ -10,16 +10,16 @@ if ($_FILES[$pic]["error"] > 0)
   else               
   {                
     if (file_exists($plugin_url . $_FILES[$pic]["name"]))  
-		echo "<script>console.log( 'Debug Objects: " .$_FILES[$pic]["name"]. 'already exists'." );</script>";
+		echo "<script>console.log( 'Debug Objects: " .$_FILES[$pic]["name"]. "already exists );</script>";
     
                    
     else               
     {   
-		echo "<script>console.log(" .$_FILES[$pic]["name"]. 'has been uploaded.'." );</script>";
+		echo "<script>console.log(" .$_FILES[$pic]["name"]. "has been uploaded.);</script>";
     
       move_uploaded_file($_FILES[$pic]["tmp_name"],
       $plugin_url . $_FILES[$pic]["name"]);
-      echo "<script>console.log(" .$_FILES[$pic]["name"]. 'has been stor.'." );</script>";
+      echo "<script>console.log(" .$_FILES[$pic]["name"]. "has been stor.);</script>";
     }                
   }
     
