@@ -20,7 +20,7 @@ function test_plugin_setup_menu(){
 function test_init(){
         echo "<h1>Hi sadmin</h1>";
 		
-	echo "<form action='/action_page.php'>
+	echo "<form action='inc/upload_file.php'>
 		Company Name:<input type='text' name='copmany'>
 		<br>
 	Categoury name:<input type='text' name='categoury'>
