@@ -3,6 +3,7 @@ $company=$_POST['copmany'];
 $cat=$_POST['categoury'];
 $sn=$_POST['sn'];
 $pic=$_FILES['pic'];
+echo plugins_url();
 if ($_FILES[$pic]["error"] > 0)
 	echo $_FILES[$pic]["error"];
     
