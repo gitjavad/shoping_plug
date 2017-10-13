@@ -21,7 +21,7 @@ function test_init(){
 	$plugin_url=plugins_url( 'inc/upload_file.php', __FILE__ );
         echo "<h1>Hi sadmin</h1>";
 		  
-	echo '<form action="'.$plugin_url.'">';
+	echo '<form action="'.$plugin_url.'" method="post">';
 	echo "
 		Company Name:<input type='text' name='copmany'>
 		<br>
