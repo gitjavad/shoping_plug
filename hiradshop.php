@@ -18,9 +18,11 @@ function test_plugin_setup_menu(){
 }
  
 function test_init(){
+	$plugin_url=plugins_url( 'inc/upload_file.php', __FILE__ );
         echo "<h1>Hi sadmin</h1>";
-		
-	echo "<form action='inc/upload_file.php'>
+		  
+	echo '<form action="'.$plugin_url.'">';
+	echo "
 		Company Name:<input type='text' name='copmany'>
 		<br>
 	Categoury name:<input type='text' name='categoury'>
