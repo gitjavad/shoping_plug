@@ -4,7 +4,7 @@ $cat=$_POST['categoury'];
 $sn=$_POST['sn'];
 $pic=$_FILES['pic'];
 
-echo($pic);
+print_r($pic);
 if ($_FILES[$pic]["error"] > 0)
 	echo "<script>console.log( 'Debug Objects: " .$_FILES[$pic]["error"]. "' );</script>";
     
