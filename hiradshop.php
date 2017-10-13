@@ -18,7 +18,7 @@ function test_plugin_setup_menu(){
 }
  
 function test_init(){
-        echo "<h1>Hi ss admin</h1>";
+        echo "<h1>Hi ssadmin</h1>";
 		
 	echo "<form action='/action_page.php'>
  <input type='file' name='pic' accept='image/*.jpg'>
