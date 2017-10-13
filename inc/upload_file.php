@@ -3,10 +3,8 @@ $company=$_POST['copmany'];
 $cat=$_POST['categoury'];
 $sn=$_POST['sn'];
 
-$url="http://hirad-co.com/wp-content/plugins/hirad_shoping/upload/";
-$target_dir = "uploads/";
+$target_dir = "http://hirad-co.com/wp-content/plugins/hirad_shoping/upload/";
 $target_file = $target_dir . basename($_FILES["pic"]["name"]);
-printf($target_file);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
