@@ -5,13 +5,7 @@ $sn=$_POST('sn');
 $target_dir = "../img/";
 $target_file = $target_dir . basename($_FILES["pic"]["name"]);
 $pic='http://hirad-co.com/wp-content/plugins/hirad_shoping/img/'.basename($_FILES["pic"]["name"]);
-if (move_uploaded_file($_FILES["pic"]["tmp_name"], $target_file)) {
-    echo "The file ". basename( $_FILES["pic"]["name"]). " has been uploaded.";
-
-} else {
-    echo 'Sorry, there was an error uploading your file.';
-
-}
+$etc=0;
 $servername = "localhost:3306";
 $username = "hirad_admin15023";
 $password = "2252734";
@@ -29,8 +23,23 @@ VALUES ($company, $cat, $sn, $pic)";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
+    $etc=1;
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
+    $etc=0;
 }
 
 $conn->close();
+
+if($etc==1)
+{
+    if (move_uploaded_file($_FILES["pic"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["pic"]["name"]). " has been uploaded.";
+
+    } else {
+        echo 'Sorry, there was an error uploading your file.';
+
+    }
+}
+
+
