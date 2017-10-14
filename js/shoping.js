@@ -2,9 +2,8 @@ jQuery(document).ready(function($){
     $('form').submit(function (event) {
 
 
-        var formData = {
-            'pic': $('input[name=pic]').val()
-        };
+        var formData = new FormData($(this)[0]);
+
         console.log(formData)
         $.ajax({
             type: 'POST',
