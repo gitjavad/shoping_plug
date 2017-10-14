@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 
-    $('form').on('submit',function (e) {
+    $('#frm_up').on('submit',function (e) {
         e.preventDefault();
         $(this).ajaxSubmit({
             beforeSend:function () {
@@ -16,6 +16,32 @@ jQuery(document).ready(function($){
             }
         });
 
+        $('#frm_db').submit(function (event) {
+
+            event.preventDefault();
+
+            var formData = {
+                'company': $('input[name=company]').val(),
+                'categoury': $('input[name=categoury]').val(),
+                'sn': $('textarea[name=sn]').val()
+            };
+            $.ajax({
+                type: 'POST',
+                url: '../inc/db_plug.php',
+                data: formData,
+                dataType: 'json',
+                encode: true
+            }).done(function (data) {
+                console.log(data);
+
+                if (!data.success) {
+
+                } else {
+
+
+                }
+            });
+        });
     });
 
 
