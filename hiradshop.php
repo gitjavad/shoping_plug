@@ -42,14 +42,18 @@ function test_init(){
 	</label>';
 	
 }
-add_action('admin_enqueue_scripts', 'my_admin_scripts');
 
-function my_admin_scripts() {
-    if (isset($_GET['page']) && $_GET['page'] == 'my_plugin_page') {
-        wp_enqueue_media();
-        wp_register_script('shoping', WP_PLUGIN_URL.'/hirad_shoping/js/shoping.js', array('jquery'));
-        wp_enqueue_script('shoping');
-    }
+function load_custom_wp_admin_style($hook) {
+        // Load only on ?page=mypluginname
+        if($hook != 'toplevel_page_mypluginname') {
+                return;
+        }
+
+	wp_enqueue_script( 'my_custom_script', plugins_url('/js/shoping.js', __FILE__) );
 }
+add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
+
+
+
 
 
