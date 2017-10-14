@@ -14,7 +14,7 @@ if (move_uploaded_file($_FILES["pic"]["tmp_name"], $target_file)) {
 }
 $servername = "localhost:3306";
 $username = "hirad_admin15023";
-$password = "2252734";
+$password = "9133647736!@#";
 $dbname = "hirad-co_com_site";
 
 // Create connection
