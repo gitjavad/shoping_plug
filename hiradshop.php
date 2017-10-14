@@ -16,7 +16,7 @@ add_action('admin_menu', 'test_plugin_setup_menu');
 function test_plugin_setup_menu(){
         add_menu_page( 'hirad shoping Page', 'Hirad Shoping', 'manage_options', 'test-plugin', 'test_init' );
 }
- 
+
 function test_init(){
 	$plugin_url=plugins_url( 'inc/upload_file.php', __FILE__ );
         echo "<h1>Hi admin</h1>";
@@ -39,7 +39,7 @@ function test_init(){
 }
 function load_custom_wp_admin_js($hook) {
     // Load only on ?page=mypluginname
-    if($hook != 'toplevel_page_mypluginname') {
+    if($hook != 'toplevel_page_test-plugin') {
         return;
     }
     wp_enqueue_script( 'plug_hirad', plugins_url('js/shoping.js', __FILE__) );
