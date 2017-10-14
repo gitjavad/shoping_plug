@@ -27,3 +27,4 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+json_encode($json);
