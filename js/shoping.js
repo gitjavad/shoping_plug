@@ -16,9 +16,9 @@ jQuery(document).ready(function($){
             }
         });
 
-        $('#frm_db').submit(function (event) {
+        $('#frm_db').on('submit',function (e) {
+            e.preventDefault();
 
-            event.preventDefault();
 
             var formData = {
                 'company': $('input[name=company]').val(),
