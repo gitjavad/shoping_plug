@@ -32,7 +32,7 @@ function test_init(){
 	<br>
 	<hr>
 	
-	 Image:<input type='file' name='pic' accept='image/*.jpg'>
+	 Image:<input type='file' name='pic' accept='image/*'>
   <br>
   <input type='submit'>
 </form> ";
