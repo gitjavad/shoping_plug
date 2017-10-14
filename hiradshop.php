@@ -45,7 +45,7 @@ function test_init(){
 
 function load_custom_wp_admin_style($hook) {
         // Load only on ?page=mypluginname
-        if($hook != 'toplevel_page_mypluginname') {
+        if($hook != 'toplevel_page_test-plugin') {
                 return;
         }
 
