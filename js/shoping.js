@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
         };
         $.ajax({
             type: 'POST',
-            url: 'inc/upload_file.php',
+            url: '../inc/upload_file.php',
             data: formData,
             dataType: 'json',
             encode: true
