@@ -18,18 +18,24 @@ function test_plugin_setup_menu(){
 }
 
 function test_init(){
-	$plugin_url=plugins_url( 'inc/upload_file.php', __FILE__ );
+	$php_db_url=plugins_url( 'inc/db_plug.php', __FILE__ );
+	$php_upload_url=plugins_url( 'inc/upload_file.php', __FILE__ );
         echo "<h1>Hi admin</h1>";
 		  
-	echo '<form action="'.$plugin_url.'" method="post" enctype="multipart/form-data">';
+	echo '<form id="frm_db" action="'.$php_db_url.'" method="post" enctype="multipart/form-data">';
 	echo "
 		Company Name:<input type='text' name='copmany'>
 		<br>
 	Categoury name:<input type='text' name='categoury'>
 	<br>
 	Code:<input type='text' name='sn'>
+
 	<br>
-	 Image:<input type='file' name='pic' accept='image/*.jpg'>
+	<hr>";
+    echo'<form id="frm_up" action="'.$php_upload_url.'" method="post" enctype="multipart/form-data">';
+	echo "Image:<input type='file' name='pic' accept='image/*.jpg'>
+    <input type='submit'>
+    </form>
   <br>
   <input type='submit'>
 </form> ";
@@ -48,4 +54,5 @@ function load_custom_wp_admin_js($hook) {
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_js' );
 
+?>
 
