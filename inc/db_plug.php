@@ -1,6 +1,6 @@
 <?php
 $company=$_POST('copmany');
-$cat=$_post('categoury');
+$cat=$_POST('categoury');
 $sn=$_POST('sn');
 
 $servername = "localhost:3306";
@@ -21,7 +21,7 @@ VALUES ($company, $cat, $sn, $pic)";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
-    $json=array('success','New record created successfully');
+    $json=array('success'=>'New record created successfully');
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
