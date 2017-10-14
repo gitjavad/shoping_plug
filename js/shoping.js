@@ -1,9 +1,31 @@
 jQuery(document).ready(function($){
-    $('form').submit(function (event) {
+
+    $('form').on('submit',function (e) {
+        e.preventDefault();
+        $(this).ajaxSubmit({
+            beforeSend:function () {
+             $("#prog").show();
+             $("#prog").attr('value','0');
+            },
+            uploadProgress:function (event,position,total,percentCompelete) {
+
+                $("#prog").attr('value',percentCompelete);
+            },
+            success:function (data) {
+                $("#upload_status").html(data)
+            }
+        });
+
+    });
 
 
-        var formData = new FormData($(this)[0]);
 
+    /*$('form').submit(function (event) {
+
+
+        var formData = {
+            'pic': $('input[name=pic]').val()
+        };
         console.log(formData)
         $.ajax({
             type: 'POST',
@@ -22,5 +44,5 @@ jQuery(document).ready(function($){
 
             }
         });
-    });
+    });*/
 });

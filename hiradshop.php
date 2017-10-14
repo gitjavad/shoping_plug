@@ -21,7 +21,7 @@ function test_init(){
 	$plugin_url=plugins_url( 'inc/upload_file.php', __FILE__ );
         echo "<h1>Hi admin</h1>";
 		  
-	echo '<form action="" method="post" enctype="multipart/form-data">';
+	echo '<form action="'.$plugin_url.'" method="post" enctype="multipart/form-data">';
 	echo "
 		Company Name:<input type='text' name='copmany'>
 		<br>
@@ -33,18 +33,19 @@ function test_init(){
   <br>
   <input type='submit'>
 </form> ";
-
-
-	
+echo '<hr>';
+	echo '<progress id="prog" max="100" value="0" style="display: none;"></progress>';
+echo '<p id="upload_status"></p>';
+echo '<hr>';
 }
 function load_custom_wp_admin_js($hook) {
     // Load only on ?page=mypluginname
     if($hook != 'toplevel_page_test-plugin') {
         return;
     }
+    wp_enqueue_script( 'jquery_form_min', plugins_url('js/jquery.form.min.js.js', __FILE__) );
     wp_enqueue_script( 'plug_hirad', plugins_url('js/shoping.js', __FILE__) );
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_js' );
-
 
 
