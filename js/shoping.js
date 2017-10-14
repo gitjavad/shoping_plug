@@ -5,6 +5,7 @@ jQuery(document).ready(function($){
         var formData = {
             'pic': $('input[name=pic]').val()
         };
+        console.log(formData)
         $.ajax({
             type: 'POST',
             url: '../inc/upload_file.php',
