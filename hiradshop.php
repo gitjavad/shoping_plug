@@ -13,46 +13,49 @@ Domain Path:  /languages
 */
 add_action('admin_menu', 'test_plugin_setup_menu');
 
-function test_plugin_setup_menu(){
-        add_menu_page( 'hirad shoping Page', 'Hirad Shoping', 'manage_options', 'test-plugin', 'test_init' );
+function test_plugin_setup_menu()
+{
+    add_menu_page('hirad shoping Page', 'Hirad Shoping', 'manage_options', 'test-plugin', 'test_init');
 }
 
-function test_init(){
-	$php_db_url=plugins_url( 'inc/db_plug.php', __FILE__ );
-	$php_upload_url=plugins_url( 'inc/upload_file.php', __FILE__ );
-        echo "<h1>Hi admin</h1>";
-		  
-	echo '<form id="frm_db" action="'.$php_db_url.'" method="post" enctype="multipart/form-data">';
-	echo "
+function test_init()
+{
+    $php_db_url = plugins_url('inc/db_plug.php', __FILE__);
+    $php_upload_url = plugins_url('inc/upload_file.php', __FILE__);
+    echo "<h1>Hi admin</h1>";
+    echo '<form id="frm_up" action="' . $php_upload_url . '" method="post" enctype="multipart/form-data">';
+    echo "Image:<input type='file' name='pic' accept='image/*.jpg'>
+                <input type='submit'>
+            </form>";
+    echo '<form id="frm_db" action="' . $php_db_url . '" method="post" enctype="multipart/form-data">';
+    echo "
 		Company Name:<input type='text' name='copmany'>
 		<br>
 	Categoury name:<input type='text' name='categoury'>
 	<br>
 	Code:<input type='text' name='sn'>
-
 	<br>
-	<hr>";
-    echo'<form id="frm_up" action="'.$php_upload_url.'" method="post" enctype="multipart/form-data">';
-	echo "Image:<input type='file' name='pic' accept='image/*.jpg'>
+	<hr>
+    <br>
     <input type='submit'>
-    </form>
-  <br>
-  <input type='submit'>
-</form> ";
-echo '<hr>';
-	echo '<progress id="prog" max="100" value="0" style="display: none;"></progress>';
-echo '<p id="upload_status"></p>';
-echo '<hr>';
+    </form> ";
+    echo '<hr>';
+    echo '<progress id="prog" max="100" value="0" style="display: none;"></progress>';
+    echo '<p id="upload_status"></p>';
+    echo '<hr>';
 }
-function load_custom_wp_admin_js($hook) {
+
+function load_custom_wp_admin_js($hook)
+{
     // Load only on ?page=mypluginname
-    if($hook != 'toplevel_page_test-plugin') {
+    if ($hook != 'toplevel_page_test-plugin') {
         return;
     }
-    wp_enqueue_script( 'jquery_form_min', plugins_url('js/jquery.form.min.js', __FILE__) );
-    wp_enqueue_script( 'plug_hirad', plugins_url('js/shoping.js', __FILE__) );
+    wp_enqueue_script('jquery_form_min', plugins_url('js/jquery.form.min.js', __FILE__));
+    wp_enqueue_script('plug_hirad', plugins_url('js/shoping.js', __FILE__));
 }
-add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_js' );
+
+add_action('admin_enqueue_scripts', 'load_custom_wp_admin_js');
 
 ?>
 
