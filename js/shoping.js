@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
         }
 
         //Extend the wp.media object
-        custom_uploader = wp.media.frames.file_frame = wp.media({
+        custom_uploader = wp.media({
             title: 'Choose Image',
             button: {
                 text: 'Choose Image'
