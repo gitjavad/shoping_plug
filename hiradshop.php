@@ -37,9 +37,14 @@ function test_init(){
 
 	
 }
-
-
-
+function load_custom_wp_admin_js($hook) {
+    // Load only on ?page=mypluginname
+    if($hook != 'toplevel_page_mypluginname') {
+        return;
+    }
+    wp_enqueue_script( 'plug_hirad', plugins_url('js/shoping.js', __FILE__) );
+}
+add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_js' );
 
 
 
