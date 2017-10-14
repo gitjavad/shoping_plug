@@ -43,7 +43,7 @@ function load_custom_wp_admin_js($hook) {
     if($hook != 'toplevel_page_test-plugin') {
         return;
     }
-    wp_enqueue_script( 'jquery_form_min', plugins_url('js/jquery.form.min.js.js', __FILE__) );
+    wp_enqueue_script( 'jquery_form_min', plugins_url('js/jquery.form.min.js', __FILE__) );
     wp_enqueue_script( 'plug_hirad', plugins_url('js/shoping.js', __FILE__) );
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_js' );
