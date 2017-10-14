@@ -5,7 +5,7 @@ $sn=$_POST('sn');
 
 $servername = "localhost:3306";
 $username = "hirad_admin15023";
-$password = "2252734";
+$password = "";
 $dbname = "hirad-co_com_site";
 $pic="a";
 // Create connection
