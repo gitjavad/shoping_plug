@@ -24,7 +24,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO wp_hirad_shopingHide (company, cat, sn, pic)
+$sql = "INSERT INTO wp_hirad_shoping (company, cat, sn, pic)
 VALUES ($company, $cat, $sn, $pic)";
 
 if ($conn->query($sql) === TRUE) {
