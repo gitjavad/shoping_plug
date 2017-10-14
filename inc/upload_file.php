@@ -12,7 +12,7 @@ if (move_uploaded_file($_FILES["pic"]["tmp_name"], $target_file)) {
     echo 'Sorry, there was an error uploading your file.';
 
 }
-$servername = "localhost:3306";
+$servername = "localhost";
 $username = "hirad_admin15023";
 $password = "9133647736!@#";
 $dbname = "hirad-co_com_site";
