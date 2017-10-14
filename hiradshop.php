@@ -12,7 +12,7 @@ Text Domain:  wporg
 Domain Path:  /languages
 */
 add_action('admin_menu', 'test_plugin_setup_menu');
-require_once( 'http://hirad-co.com/wp-admin/includes/file.php' );
+
 function test_plugin_setup_menu(){
         add_menu_page( 'hirad shoping Page', 'Hirad Shoping', 'manage_options', 'test-plugin', 'test_init' );
 }
