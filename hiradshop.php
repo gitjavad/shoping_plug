@@ -18,8 +18,8 @@ function test_plugin_setup_menu(){
 }
  
 function test_init(){
-	/*$plugin_url=plugins_url( 'inc/upload_file.php', __FILE__ );
-        echo "<h1>Hi sadmin</h1>";
+	$plugin_url=plugins_url( 'inc/upload_file.php', __FILE__ );
+        echo "<h1>Hi ss sadmin</h1>";
 		  
 	echo '<form action="'.$plugin_url.'" method="post" enctype="multipart/form-data">';
 	echo "
@@ -32,22 +32,11 @@ function test_init(){
 	 Image:<input type='file' name='pic' accept='image/*.jpg'>
   <br>
   <input type='submit'>
-</form> ";*/
+</form> ";
 	
-	echo'
-	<label for="upload_image">
-    <input id="upload_image" type="text" size="36" name="ad_image" value="http://" /> 
-    <input id="upload_image_button" class="button" type="button" value="Upload Image" />
-    <br />Enter a URL or upload an image
-	</label>';
+
 	
 }
-
-function load_custom_wp_admin_style($hook) {
-
-	wp_enqueue_script( 'my_custom_script', plugins_url('/js/shoping.js', __FILE__) );
-}
-add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 
 
 
