@@ -1,6 +1,6 @@
 <?php
 
-$sn = $_POST("sn");
+$sn = $_GET("sn");
 
 echo $sn;
 /*$target_dir = "../img/";
