@@ -1,9 +1,5 @@
 <?php
-$company = $_POST('copmany');
-$cat = $_POST('categoury');
-$sn = $_POST('sn');
-$target_file = $target_dir . basename($_FILES["pic"]["name"]);
-echo $company;
+
 /*$target_dir = "../img/";
 $target_file = $target_dir . basename($_FILES["pic"]["name"]);
 $pic='http://hirad-co.com/wp-content/plugins/hirad_shoping/img/'.basename($_FILES["pic"]["name"]);
