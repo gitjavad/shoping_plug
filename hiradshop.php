@@ -23,7 +23,7 @@ function test_init(){
 
 	echo '<form action="'.$plugin_url.'" method="post" enctype="multipart/form-data">';
 	echo "
-		Company Name:<input type='text' name='copmany'>
+		Company Name:<input type='text' name='company'>
 		<br>
 	Categoury name:<input type='text' name='categoury'>
 	<br>

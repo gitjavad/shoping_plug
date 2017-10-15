@@ -1,7 +1,7 @@
 <?php
-$company = $_POST('copmany');
-$cat = $_POST('categoury');
-$sn = $_POST('sn');
+$company = $_POST("company");
+$cat = $_POST("categoury");
+$sn = $_POST("sn");
 
 echo $company;
 /*$target_dir = "../img/";
