@@ -1,5 +1,4 @@
 <?php
-
 $cat = $_POST['categoury'];
 $total = count($_FILES['pic']['name']);
 $target_dir = "../img/";
@@ -40,6 +39,8 @@ VALUES ($company, $cat, $sn, $pic)";
 
             $conn->close();
 
+        }else{
+            echo ('{message:ohno}');
         }
     }
 }
