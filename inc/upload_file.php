@@ -22,15 +22,15 @@ for($i=0; $i<$total; $i++) {
             $password = "9133647736!@#";
             $dbname = "hirad-co_com_site";
             $sn=basename($_FILES["pic"]["name"][$i]);
-            $pic=$newFilePath;
+
             $conn = new mysqli($servername, $username, $password, $dbname);
 
             if ($conn->connect_error) {
                 echo '{ "message": "'.die($conn->connect_error).' "}';
             }
 
-            $sql = "INSERT INTO wp_hirad_shoping (company, cat, sn, pic)
-VALUES ($company, $cat, $sn, $pic)";
+            $sql = "INSERT INTO wp_hirad_shoping (company, cat, sn)
+VALUES ($company, $cat, $sn)";
 
             if ($conn->query($sql) === TRUE) {
                 echo '{ "message": "New record created successfully" }';
