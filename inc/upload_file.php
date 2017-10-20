@@ -1,6 +1,17 @@
 <?php
 $cat = $_POST['categoury'];
-$total = count($_FILES['pic']['name']);
+$target_dir = "../img/";
+$target_file = $target_dir . basename($_FILES["pic"]["name"]);
+$pic='http://hirad-co.com/wp-content/plugins/hirad_shoping/img/'.basename($_FILES["pic"]["name"]);
+if (move_uploaded_file($_FILES["pic"]["tmp_name"], $target_file)) {
+
+    echo '{ "message": "' . basename( $_FILES["pic"]["name"]) . '" }';
+
+} else {
+    echo '{ "message": "no" }';
+
+}
+/*$total = count($_FILES['pic']['name']);
 $target_dir = "../img/";
 // Loop through each file
 echo '{ "message": "' . $total . '" }';
@@ -16,7 +27,7 @@ for($i=0; $i<$total; $i++) {
         //Upload the file into the temp dir
         if(move_uploaded_file($tmpFilePath, $newFilePath)) {
            echo '{ "message": "' . $_POST['categoury'] . '" }';
-            /*
+
                         $servername = "localhost";
                         $username = "hirad_admin15023";
                         $password = "9133647736!@#";
@@ -43,7 +54,7 @@ for($i=0; $i<$total; $i++) {
 
                     }else{
                         echo ('{message:ohno}');
-                    }*/
+                    }
         }
     }
 }
