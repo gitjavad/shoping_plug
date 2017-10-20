@@ -1,5 +1,6 @@
 <?php
 $cat = $_POST['categoury'];
+$company=$_POST['company'];
 $total = count($_FILES['pic']['name']);
 $target_dir = "../img/";
 
@@ -20,7 +21,6 @@ for($i=0; $i<$total; $i++) {
             $username = "hirad_admin15023";
             $password = "9133647736!@#";
             $dbname = "hirad-co_com_site";
-            $company=dirname($_FILES['pic'][$i]);
             $sn=basename($_FILES["pic"]["name"][$i]);
             $pic=$newFilePath;
             $conn = new mysqli($servername, $username, $password, $dbname);

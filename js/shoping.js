@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
     $('form').on('submit',function (e) {
-        console.log($('#ks').val())
+
         e.preventDefault();
         $(this).ajaxSubmit({
             beforeSend:function () {

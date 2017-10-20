@@ -22,10 +22,12 @@ function test_init(){
         echo "<h1>Hi admin</h1>";
     echo '<form action="'.$plugin_url.'" method="post" ">';
     echo "
+company name:<input type='text' name='company'>
+	<br>
 	Categoury name:<input type='text' name='categoury'>
 	<br>
 	<hr>
-	 Image:<input id='ks' type='file' name='pic[]' accept='image/*' multiple='multiple'>
+	 Image:<input type='file' name='pic[]' accept='image/*' multiple='multiple'>
   <br>
   <input type='submit'>
 </form> ";
