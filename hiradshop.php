@@ -24,10 +24,18 @@ function test_init(){
     echo "
 Company Name:<input type='text' name='company'>
 	<br>
+	<select name='categoury'>
+    <option value='پارکت'>wood floor</option>
+    <option value='دیوارکوب''>wall panel</option>
+    <option value='کف پوش'>floor pvc</option>
+    <option value='ابزار'>tools</option>
+     <option value='پارتیشن'>partition</option>
+      <option value='سنگ'>stone</option>
+  </select>
 	Categoury Name:<input type='text' name='categoury'>
 	<br>
 	<hr>
-	 Image:<input type='file' name='pic[]' accept='image/*' multiple='multiple'>
+	 ALL Image:<input type='file' name='pic[]' accept='image/*' multiple='multiple'>
   <br>
   <input type='submit'>
 </form> ";
