@@ -4,7 +4,14 @@ jQuery(document).ready(function($){
         e.preventDefault();
         $(this).ajaxSubmit({
             beforeSend:function () {
-                
+                $("#prog").show();
+                $("#prog").attr('value','0');
+            },
+            uploadProgress:function (event,podition,total,percentCompelete) {
+                $("#prog").attr('value',percentCompelete);
+            },
+            success:function (data) {
+                $("#upload_status").html(data)
             }
         })
 
