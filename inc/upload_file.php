@@ -10,7 +10,7 @@ for($i=0; $i<$total; $i++) {
     //Make sure we have a filepath
     if ($tmpFilePath != ""){
         //Setup our new file path
-        $newFilePath =$target_dir . basename($_FILES["pic"]["name"])[$i];
+        $newFilePath =$target_dir . $_FILES["pic"]["name"][$i];
 
         //Upload the file into the temp dir
         if(move_uploaded_file($tmpFilePath, $newFilePath)) {
