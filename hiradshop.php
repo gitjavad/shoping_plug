@@ -20,7 +20,7 @@ function test_plugin_setup_menu(){
 function test_init(){
 	$plugin_url=plugins_url( 'inc/upload_file.php', __FILE__ );
         echo "<h1>Hi admin</h1>";
-    echo '<form action="'.$plugin_url.'" method="post" enctype="multipart/form-data">';
+    echo '<form action="'.$plugin_url.'" method="post" ">';
     echo "
 	Categoury name:<input type='text' name='categoury'>
 	<br>
