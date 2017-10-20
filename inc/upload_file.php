@@ -2,7 +2,7 @@
 $cat = $_POST['categoury'];
 $total = count($_FILES['pic']['name']);
 $target_dir = "../img/";
-echo '{ "message": "'.$total.'" }';
+
 // Loop through each file
 for($i=0; $i<$total; $i++) {
     //Get the temp file path
@@ -20,8 +20,8 @@ for($i=0; $i<$total; $i++) {
             $username = "hirad_admin15023";
             $password = "9133647736!@#";
             $dbname = "hirad-co_com_site";
-            $company=dirname($_FILES["pic"]);
-            $sn=basename($_FILES["pic"]["name"]);
+            $company=dirname($_FILES["pic"]["name"][$i]);
+            $sn=basename($_FILES["pic"]["name"][$i]);
             $pic=$newFilePath;
             $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -42,7 +42,7 @@ VALUES ($company, $cat, $sn, $pic)";
             $conn->close();
 
         }else{
-
+            echo '{ "message": "no file upload" }';
         }
     }
 }
