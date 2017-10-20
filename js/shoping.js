@@ -11,7 +11,7 @@ jQuery(document).ready(function($){
                 $("#prog").attr('value',percentCompelete);
             },
             success:function (data) {
-                console.log(data.message/n)
+                console.log(data.message)
                 console.log("ha")
 
             }
