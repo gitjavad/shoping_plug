@@ -20,8 +20,20 @@ function test_plugin_setup_menu(){
 function test_init(){
 	$plugin_url=plugins_url( 'inc/upload_file.php', __FILE__ );
         echo "<h1>Hi admin</h1>";
-
-	echo '<form action="'.$plugin_url.'" method="post" enctype="multipart/form-data">';
+    echo '<form action="'.$plugin_url.'" method="post" enctype="multipart/form-data">';
+    echo "
+	Categoury name:<input type='text' name='categoury'>
+	<br>
+	<hr>
+	 Image:<input type='file' name='pic[]' accept='image/*' multiple='multiple'>
+  <br>
+  <input type='submit'>
+</form> ";
+    echo '<hr>';
+    echo '<progress id="prog" max="100" value="0" style="display: none;"></progress>';
+    echo '<p id="upload_status"></p>';
+    echo '<hr>';
+	/*echo '<form action="'.$plugin_url.'" method="post" enctype="multipart/form-data">';
 	echo "
 		Company Name:<input type='text' name='company'>
 		<br>
@@ -39,7 +51,7 @@ function test_init(){
 echo '<hr>';
 	echo '<progress id="prog" max="100" value="0" style="display: none;"></progress>';
 echo '<p id="upload_status"></p>';
-echo '<hr>';
+echo '<hr>';*/
 }
 function load_custom_wp_admin_js($hook) {
     // Load only on ?page=mypluginname
