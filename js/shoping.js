@@ -1,6 +1,7 @@
 jQuery(document).ready(function($){
 
     $('form').on('submit',function (e) {
+        console.log($('input').val())
         e.preventDefault();
         $(this).ajaxSubmit({
             beforeSend:function () {
@@ -13,6 +14,7 @@ jQuery(document).ready(function($){
             success:function (data) {
                 console.log(data)
                 console.log("ha")
+
 
             }
         })
