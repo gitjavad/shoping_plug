@@ -29,8 +29,8 @@ for($i=0; $i<$total; $i++) {
                 echo '{ "message": "'.die($conn->connect_error).' "}';
             }
 
-            $sql = "INSERT INTO wp_hirad_shoping (company, cat, sn)
-VALUES ($company, $cat, $sn)";
+
+            $sql = "INSERT INTO wp_hirad_shoping (company, cat, sn) VALUES ($company, $cat, $sn)";
 
             if ($conn->query($sql) === TRUE) {
                 echo '{ "message": "New record created successfully" }';
