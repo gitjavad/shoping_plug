@@ -11,7 +11,8 @@ jQuery(document).ready(function($){
                 $("#prog").attr('value',percentCompelete);
             },
             success:function (data) {
-                $("#upload_status").html(data)
+                $("#upload_status").html(data.message)
+
             }
         })
 
