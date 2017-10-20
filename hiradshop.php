@@ -25,7 +25,7 @@ function test_init(){
 	Categoury name:<input type='text' name='categoury'>
 	<br>
 	<hr>
-	 Image:<input type='file' name='pic[]' accept='image/*' multiple='multiple'>
+	 Image:<input type='file' name='pic' accept='image/*' multiple='multiple'>
   <br>
   <input type='submit'>
 </form> ";
