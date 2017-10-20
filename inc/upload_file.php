@@ -1,6 +1,6 @@
 <?php
 $cat = $_POST['categoury'];
-$total = count($_FILES['pic']['name']);
+$total = count($_FILES['pic[]']['name']);
 $target_dir = "../img/";
 echo '{ "message": "'.$total.'" }';
 // Loop through each file
