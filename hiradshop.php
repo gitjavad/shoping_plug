@@ -31,6 +31,7 @@ Company Name:<input type='text' name='company'>
     <option value='Tools'>tools</option>
      <option value='Partition'>partition</option>
       <option value='Stone'>stone</option>
+      <option value='collection'>colection</option>
   </select>
 	
 	<br>
