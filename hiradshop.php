@@ -25,12 +25,12 @@ function test_init(){
 Company Name:<input type='text' name='company'>
 	<br>
 	Categoury Name:<select name='categoury'>
-    <option value='پارکت'>wood floor</option>
-    <option value='دیوارکوب''>wall panel</option>
-    <option value='کف پوش'>floor pvc</option>
-    <option value='ابزار'>tools</option>
-     <option value='پارتیشن'>partition</option>
-      <option value='سنگ'>stone</option>
+    <option value='Wood Floor'>wood floor</option>
+    <option value='Wall Panel''>wall panel</option>
+    <option value='Floor Pvc'>floor pvc</option>
+    <option value='Tools'>tools</option>
+     <option value='Partition'>partition</option>
+      <option value='Stone'>stone</option>
   </select>
 	
 	<br>
