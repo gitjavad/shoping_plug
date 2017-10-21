@@ -1,5 +1,6 @@
 jQuery(document).ready(function($){
-
+var total_lb
+    var dv
     $('form').on('submit',function (e) {
 
         e.preventDefault();
@@ -10,13 +11,17 @@ jQuery(document).ready(function($){
             },
             uploadProgress:function (event,podition,total,percentCompelete) {
                 $("#prog").attr('value',percentCompelete);
-                console.log(event)
+                total_lb=total
             },
             success:function (data) {
-                console.log(data)
-                console.log("ha")
+                $('input[type=file]').change(function () {
+                    dv = this.files.length;
 
+                })
 
+                $('#upload_status').html='All'+dv+'Files With'+total_lb+'Size Is Done Upload'
+
+                $('#upload_status').style.cssText="color:green"
             }
         })
 
