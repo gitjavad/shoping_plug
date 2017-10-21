@@ -10,6 +10,7 @@ jQuery(document).ready(function($){
             },
             uploadProgress:function (event,podition,total,percentCompelete) {
                 $("#prog").attr('value',percentCompelete);
+                console.log(event)
             },
             success:function (data) {
                 console.log(data)
