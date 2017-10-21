@@ -19,7 +19,7 @@ var total_lb
 
                 })
 
-                $('#upload_status').html='All'+dv+'Files With'+total_lb+'Size Is Done Upload'
+                document.getElementById("upload_status").innerHTML='All'+dv+'Files With'+total_lb+'Size Is Done Upload'
 
                 document.getElementById("upload_status").style.cssText = "color:green;"
             }
