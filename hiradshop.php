@@ -35,7 +35,7 @@ Company Name:<input type='text' name='company'>
 	
 	<br>
 	<hr>
-	 ALL Image:<input type='file' name='pic[]' accept='image/*' multiple='multiple'>
+	 ALL Image:<input id='ll_in' type='file' name='pic[]' accept='image/*' multiple='multiple'>
   <br>
   <input type='submit'>
 </form> ";

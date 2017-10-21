@@ -10,16 +10,14 @@ var total_lb
                 $("#prog").attr('value','0');
             },
             uploadProgress:function (event,podition,total,percentCompelete) {
+                dv=document.getElementById('ll_in').files.length;
                 $("#prog").attr('value',percentCompelete);
                 total_lb=total
             },
             success:function (data) {
-                $('input[type=file]').change(function () {
-                    dv = this.files.length;
 
-                })
 
-                document.getElementById("upload_status").innerHTML='All'+dv+'Files With'+total_lb+'Size Is Done Upload'
+                document.getElementById("upload_status").innerHTML='All '+dv+'Files With '+total_lb+' Size Is Done Upload'
 
                 document.getElementById("upload_status").style.cssText = "color:green;"
             }
